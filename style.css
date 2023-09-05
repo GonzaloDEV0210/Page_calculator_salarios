@@ -9,14 +9,21 @@
     --color_Letra: #1F1F1F;
     --color_letra_hover: #767575;
     --color_skyBlue_calculator: #D1E6F7;
+    --color_skyBlue_calculator_transparent:#dddddd;
     --color_title_calculator: #0D476A;
+    --color_title_calculator_hover: #175982;
     --color_numbers: #768192;
     --color_clear_input: #EE6668;
+    --color_clear_input_hover: #cf4e50;
     --color_botonos_numbers: #48A3F2;
+    --color_botonos_numbers_hover: #63b6ff;
     --color_math_signs: #F1A535;
+    --color_math_signs_hover: #f9b653;
     --color_botons_equals: #2DD055;
+    --color_botons_equals_hover: #47e36e;
+    --color_background_nav: #181818ec;
     /* Theme dark */
-    --color_letra_dark: #F1F1F1
+    --color_letra_dark: #F1F1F1;
 }
 
 body {
@@ -72,14 +79,169 @@ body {
     cursor: pointer;
 }
 
-.icon_close_nav, .icon_bars {
+.li_close_nav, .span_bars {
     display: none;
-    font-size: 20px;
+}
+
+.icon_close_nav, .icon_bars {
+    font-size: 30px;
     cursor: pointer;
+}
+
+.section_calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background_calculator {
+    background-color: var(--color_skyBlue_calculator);
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    display: inline-flex;
+    padding: 10px 10px 40px 10px;
+    border-radius: 30px;
+}
+
+.title_calculator {
+    color: var(--color_title_calculator);
+}
+
+.container_inputs {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px 0 30px 0;
+}
+
+#operacion {
+    height: 30px;
+    font-size: 15px;
+    background-color: var(--color_skyBlue_calculator);
+    border: none;
+    outline: none;
+}
+
+#resultado {
+    height: 40px;
+    font-size: 25px;
+    background-color: var(--color_skyBlue_calculator);
+    border: none;
+    outline: none;
+    color: var(--color_title_calculator);
+}
+
+.container_numbers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container_operaciones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.operator {
+    display: inline-flex;
+    color: var(--color_letra_dark);
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.operator_extra {
+    background-color: var(--color_title_calculator);
+    transition: .3s;
+    font-size: 17px;
+    height: 40px;
+    &:hover {
+        background-color: var(--color_title_calculator_hover);
+    }
+}
+
+.operator_clear {
+    background-color: var(--color_clear_input);
+    transition: .3s;
+    &:hover {
+        background-color: var(--color_clear_input_hover);
+    }
+}
+
+.operator_number {
+    background-color: var(--color_botonos_numbers);
+    transition: .3s;
+    &:hover {
+        background-color: var(--color_botonos_numbers_hover);
+    }
+}
+
+.operator_signos {
+    background-color: var(--color_math_signs);
+    transition: .3s;
+    &:hover {
+        background-color: var(--color_math_signs_hover);
+    }
+}
+
+.operator_equals {
+    background-color: var(--color_botons_equals);
+    transition: .3s;
+    &:hover {
+        background-color: var(--color_botons_equals_hover);
+    }
 }
 
 @media (max-width: 980px) {
     .list_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color_background_nav);
+        color: var(--color_skyBlue_calculator);
+    }
+
+    .item_list_nav:first-child {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .link_item_nav {
+        color: var(--color_letra_dark);
+        font-size: 20px;
+        &:hover {
+            color: var(--color_skyBlue_calculator_transparent);
+        }
+    }
+
+    .li_close_nav, .span_bars {
+        display: block;
+    }
+
+    .icon_close_nav {
+        color: var(--color_letra_dark);
+    }
+
+    .icon_theme {
+        font-size: 20px;
+    }
+
+    .ocultar {
         display: none;
     }
 

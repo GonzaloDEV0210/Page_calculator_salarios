@@ -11,16 +11,63 @@
     <header class="header">
         <a href="index.html" class="link_title"><h1 class="title">CalculaWeb</h1></a>
         <nav class="nav">
-            <ul class="list_nav">
-                <li class="item_list_nav"><i class="fa-solid fa-xmark icon_close_nav"></i></li>
+            <ul class="list_nav ocultar">
+                <li class="item_list_nav li_close_nav"><i class="fa-solid fa-xmark icon icon_close_nav"></i></li>
                 <li class="item_list_nav"><a href="index.html" class="link_item_nav">Calculadora</a></li>
                 <li class="item_list_nav"><a href="#" class="link_item_nav">Moda</a></li>
                 <li class="item_list_nav"><a href="#" class="link_item_nav">Mediana</a></li>
                 <li class="item_list_nav"><a href="#" class="link_item_nav">Proyección Salarial</a></li>
-                <li class="item_list_nav theme"><i class="fa-solid fa-circle-half-stroke"></i></li>
+                <li class="item_list_nav theme"><i class="fa-solid fa-circle-half-stroke icon icon_theme"></i></li>
             </ul>
-            <i class="fa-solid fa-bars icon_bars"></i>
+            <span class="span_bars"><i class="fa-solid fa-bars icon icon_bars"></i></span>
         </nav>
     </header>
+    <section class="section_calculator">
+        <div class="background_calculator">
+            <h2 class="title_calculator">Calculate</h2>
+            <div class="container_inputs">
+                <input type="text" dir="rtl" readonly name="operacion" id="operacion">
+                <input type="text" dir="rtl" readonly name="resultado" id="resultado">
+            </div>
+            <div class="container_numbers">
+                <div class="container_operaciones">
+                    <span class="operator operator_extra"><i class="fa-solid fa-e"></i></span>
+                    <span class="operator operator_extra">%</span>
+                    <span class="operator operator_extra">sin</span>
+                    <span class="operator operator_extra">deg</span>
+                </div>
+                <div class="container_operaciones">
+                    <span class="operator operator_clear"><i class="fa-solid fa-c"></i></span>
+                    <span class="operator operator_number">(</span>
+                    <span class="operator operator_number">)</span>
+                    <span class="operator operator_signos"><i class="fa-solid fa-divide"></i></span>
+                </div>
+                <div class="container_operaciones">
+                    <span class="operator operator_number"><i class="fa-solid fa-7"></i></span>
+                    <span class="operator operator_number"><i class="fa-solid fa-8"></i></span>
+                    <span class="operator operator_number"><i class="fa-solid fa-9"></i></span>
+                    <span class="operator operator_signos"><i class="fa-solid fa-x"></i></span>
+                </div>
+                <div class="container_operaciones">
+                    <span class="operator operator_number"><i class="fa-solid fa-4"></i></span>
+                    <span class="operator operator_number"><i class="fa-solid fa-5"></i></span>
+                    <span class="operator operator_number"><i class="fa-solid fa-6"></i></span>
+                    <span class="operator operator_signos"><i class="fa-solid fa-minus"></i></span>
+                </div>
+                <div class="container_operaciones">
+                    <span class="operator operator_number"><i class="fa-solid fa-1"></i></span>
+                    <span class="operator operator_number"><i class="fa-solid fa-2"></i></span>
+                    <span class="operator operator_number"><i class="fa-solid fa-3"></i></span>
+                    <span class="operator operator_signos"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="container_operaciones">
+                    <span class="operator operator_number">0</span>
+                    <span class="operator operator_number">00</span>
+                    <span class="operator operator_number">.</span>
+                    <span class="operator operator_equals"><i class="fa-solid fa-equals"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
