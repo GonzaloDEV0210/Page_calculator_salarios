@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Theme ligth */
+    --color_Letra: #1F1F1F;
+    --color_letra_hover: #767575;
+    --color_skyBlue_calculator: #D1E6F7;
+    --color_title_calculator: #0D476A;
+    --color_numbers: #768192;
+    --color_clear_input: #EE6668;
+    --color_botonos_numbers: #48A3F2;
+    --color_math_signs: #F1A535;
+    --color_botons_equals: #2DD055;
+    /* Theme dark */
+    --color_letra_dark: #F1F1F1
+}
+
+body {
+    padding: 20px 8% 5px 8%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color_Letra);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link_title {
+    text-decoration: none;
+    color: var(--color_Letra);
+}
+
+.title {
+    font-size: 35px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.list_nav {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+}
+
+.item_list_nav {
+    font-weight: 400;
+    transition: .5s;
+}
+
+.link_item_nav {
+    text-decoration: none;
+    color: var(--color_Letra);
+    transition: .3s;
+    &:hover {
+        color: var(--color_letra_hover);
+        cursor: pointer;
+    }
+}
+
+.theme {
+    cursor: pointer;
+}
+
+.icon_close_nav, .icon_bars {
+    display: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 980px) {
+    .list_nav {
+        display: none;
+    }
+
+    .icon_bars {
+        display: block;
+    }
+}
