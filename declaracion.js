@@ -25,6 +25,3 @@ const number_cero = document.querySelector(".number_cero");
 const number_doble_cero = document.querySelector(".number_doble_cero");
 const signo_punto = document.querySelector(".signo_punto");
 const signo_equals = document.querySelector(".signo_equals");
-
-console.log(e.getAttribute("data-value"));
-console.log(porcentaje.getAttribute("data-value"))

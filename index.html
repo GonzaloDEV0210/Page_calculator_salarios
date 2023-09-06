@@ -26,8 +26,8 @@
         <div class="background_calculator">
             <h2 class="title_calculator">Calculate</h2>
             <div class="container_inputs">
-                <input type="text" dir="rtl" readonly name="operacion" id="operacion">
-                <input type="text" dir="rtl" readonly name="resultado" id="resultado">
+                <input type="text" dir="ltr" readonly name="operacion" id="operacion">
+                <input type="text" dir="ltr" readonly name="resultado" id="resultado">
             </div>
             <div class="container_numbers">
                 <div class="container_operaciones">
@@ -38,37 +38,38 @@
                 </div>
                 <div class="container_operaciones">
                     <span class="operator operator_clear"><i class="fa-solid fa-c"></i></span>
-                    <span class="operator operator_number parentesis1">(</span>
-                    <span class="operator operator_number parentesis2">)</span>
-                    <span class="operator operator_signos signo_division"><i class="fa-solid fa-divide"></i></span>
+                    <span class="operator operator_number parentesis1" data-value="(">(</span>
+                    <span class="operator operator_number parentesis2" data-value=")">)</span>
+                    <span class="operator operator_signos signo_division" data-value="/"><i class="fa-solid fa-divide"></i></span>
                 </div>
                 <div class="container_operaciones">
-                    <span class="operator operator_number number_7"><i class="fa-solid fa-7"></i></span>
-                    <span class="operator operator_number number_8"><i class="fa-solid fa-8"></i></span>
-                    <span class="operator operator_number number_9"><i class="fa-solid fa-9"></i></span>
-                    <span class="operator operator_signos signo_x"><i class="fa-solid fa-x"></i></span>
+                    <span class="operator operator_number number_7" data-value="7"><i class="fa-solid fa-7"></i></span>
+                    <span class="operator operator_number number_8" data-value="8"><i class="fa-solid fa-8"></i></span>
+                    <span class="operator operator_number number_9" data-value="8"><i class="fa-solid fa-9"></i></span>
+                    <span class="operator operator_signos signo_x" data-value="x"><i class="fa-solid fa-x"></i></span>
                 </div>
                 <div class="container_operaciones">
-                    <span class="operator operator_number number_4"><i class="fa-solid fa-4"></i></span>
-                    <span class="operator operator_number number_5"><i class="fa-solid fa-5"></i></span>
-                    <span class="operator operator_number number_6"><i class="fa-solid fa-6"></i></span>
-                    <span class="operator operator_signos signo_menos"><i class="fa-solid fa-minus"></i></span>
+                    <span class="operator operator_number number_4" data-value="4"><i class="fa-solid fa-4"></i></span>
+                    <span class="operator operator_number number_5" data-value="5"><i class="fa-solid fa-5"></i></span>
+                    <span class="operator operator_number number_6" data-value="6"><i class="fa-solid fa-6"></i></span>
+                    <span class="operator operator_signos signo_menos" data-value="-"><i class="fa-solid fa-minus"></i></span>
                 </div>
                 <div class="container_operaciones">
-                    <span class="operator operator_number number_1"><i class="fa-solid fa-1"></i></span>
-                    <span class="operator operator_number number_2"><i class="fa-solid fa-2"></i></span>
-                    <span class="operator operator_number number_3"><i class="fa-solid fa-3"></i></span>
-                    <span class="operator operator_signos signo_mas"><i class="fa-solid fa-plus"></i></span>
+                    <span class="operator operator_number number_1" data-value="1"><i class="fa-solid fa-1"></i></span>
+                    <span class="operator operator_number number_2" data-value="2"><i class="fa-solid fa-2"></i></span>
+                    <span class="operator operator_number number_3" data-value="3"><i class="fa-solid fa-3"></i></span>
+                    <span class="operator operator_signos signo_mas" data-value="+"><i class="fa-solid fa-plus"></i></span>
                 </div>
                 <div class="container_operaciones">
-                    <span class="operator operator_number number_cero"><i class="fa-solid fa-0"></i></span>
-                    <span class="operator operator_number number_doble_cero"><i class="fa-solid fa-0"></i><i class="fa-solid fa-0"></i></span>
-                    <span class="operator operator_number signo_punto">.</span>
-                    <span class="operator operator_equals signo_equals"><i class="fa-solid fa-equals"></i></span>
+                    <span class="operator operator_number number_cero" data-value="0"><i class="fa-solid fa-0"></i></span>
+                    <span class="operator operator_number number_doble_cero" data-value="00"><i class="fa-solid fa-0"></i><i class="fa-solid fa-0"></i></span>
+                    <span class="operator operator_number signo_punto" data-value=".">.</span>
+                    <span class="operator operator_equals signo_equals" data-value="="><i class="fa-solid fa-equals"></i></span>
                 </div>
             </div>
         </div>
     </section>
-    <script src="script.js"></script>
+    <script src="declaracion.js"></script>
+    <script src="funciones_botons.js"></script>
 </body>
 </html>
