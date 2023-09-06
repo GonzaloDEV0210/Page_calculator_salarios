@@ -7,34 +7,32 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6d642dc6ea.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="body">
     <header class="header">
         <a href="index.html" class="link_title"><h1 class="title">CalculaWeb</h1></a>
-        <nav class="nav">
-            <ul class="list_nav ocultar">
-                <li class="item_list_nav li_close_nav"><i class="fa-solid fa-xmark icon icon_close_nav"></i></li>
-                <li class="item_list_nav"><a href="index.html" class="link_item_nav">Calculadora</a></li>
-                <li class="item_list_nav"><a href="#" class="link_item_nav">Moda</a></li>
-                <li class="item_list_nav"><a href="#" class="link_item_nav">Mediana</a></li>
-                <li class="item_list_nav"><a href="#" class="link_item_nav">Proyección Salarial</a></li>
-                <li class="item_list_nav theme"><i class="fa-solid fa-circle-half-stroke icon icon_theme"></i></li>
-            </ul>
-            <span class="span_bars"><i class="fa-solid fa-bars icon icon_bars"></i></span>
-        </nav>
+        <ul class="list_nav ocultar">
+            <li class="item_list_nav li_close_nav"><i class="fa-solid fa-xmark icon icon_close_nav"></i></li>
+            <li class="item_list_nav"><a href="index.html" class="link_item_nav link_item_nav_cal">Calculadora</a></li>
+            <li class="item_list_nav"><a href="#" class="link_item_nav link_item_nav_mod">Moda</a></li>
+            <li class="item_list_nav"><a href="#" class="link_item_nav link_item_nav_med">Mediana</a></li>
+            <li class="item_list_nav"><a href="#" class="link_item_nav link_item_nav_pro">Proyección Salarial</a></li>
+            <li class="item_list_nav theme"><i class="fa-solid fa-circle-half-stroke icon icon_theme"></i></li>
+        </ul>
+        <span class="span_bars"><i class="fa-solid fa-bars icon icon_bars"></i></span>
     </header>
     <section class="section_calculator">
         <div class="background_calculator">
             <h2 class="title_calculator">Calculate</h2>
             <div class="container_inputs">
-                <input type="text" dir="ltr" readonly name="operacion" id="operacion">
-                <input type="text" dir="ltr" readonly name="resultado" id="resultado">
+                <input type="text" readonly name="operacion" id="operacion">
+                <input type="text" readonly name="resultado" id="resultado">
             </div>
             <div class="container_numbers">
                 <div class="container_operaciones">
                     <span class="operator operator_extra signo_e" data-value="e"><i class="fa-solid fa-e"></i></span>
                     <span class="operator operator_extra signo_porcentaje" data-value="%">%</span>
-                    <span class="operator operator_extra signo_sin">sin</span>
-                    <span class="operator operator_extra signo_deg">deg</span>
+                    <span class="operator operator_extra signo_deg" data-value="°">deg</span>
+                    <span class="operator operator_extra signo_rad">rad</span>
                 </div>
                 <div class="container_operaciones">
                     <span class="operator operator_clear"><i class="fa-solid fa-c"></i></span>
@@ -71,5 +69,7 @@
     </section>
     <script src="declaracion.js"></script>
     <script src="funciones_botons.js"></script>
+    <script src="theme.js"></script>
+    <script src="nav.js"></script>
 </body>
 </html>

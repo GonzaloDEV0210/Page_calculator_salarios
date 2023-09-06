@@ -14,6 +14,30 @@ porcentaje.addEventListener("click", function(){
     };
 });
 
+function radianes(numero) {
+    numeroRadian = ((numero * Math.PI) / 180);
+    return numeroRadian;
+}
+
+function grados(numero) {
+    numeroGrados = (numero*(180 / Math.PI));
+    return numeroGrados;
+}
+
+deg.addEventListener("click", function(){
+    let numeroIngre = input_resultado.value;
+    let respuestGrados = grados(numeroIngre);
+    input_operacion.value = "gra " + input_resultado.value;
+    input_resultado.value = parseFloat(respuestGrados.toFixed(3));
+});
+
+rad.addEventListener("click", function(){
+    let numeroIngresado = input_resultado.value;
+    let respuestaFinal = radianes(numeroIngresado);
+    input_operacion.value = "rad " + input_resultado.value;
+    input_resultado.value = parseFloat(respuestaFinal.toFixed(3));
+});
+
 c.addEventListener("click", function(){
     input_operacion.value = "";
     input_resultado.value = "";
@@ -165,5 +189,6 @@ signo_punto.addEventListener("click", function(){
 
 signo_equals.addEventListener("click", function(){
     let result = eval(input_resultado.value);
+    input_operacion.value = input_resultado.value;
     input_resultado.value = result;
 });

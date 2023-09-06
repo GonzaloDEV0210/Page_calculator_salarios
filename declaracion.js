@@ -3,8 +3,8 @@ const input_resultado = document.querySelector("#resultado");
 
 const e = document.querySelector(".signo_e");
 const porcentaje = document.querySelector(".signo_porcentaje");
-const sin = document.querySelector(".signo_sin");
 const deg = document.querySelector(".signo_deg");
+const rad = document.querySelector(".signo_rad");
 const c = document.querySelector(".operator_clear");
 const parentesis1 = document.querySelector(".parentesis1");
 const parentesis2 = document.querySelector(".parentesis2");

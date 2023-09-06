@@ -21,21 +21,25 @@
     --color_math_signs_hover: #f9b653;
     --color_botons_equals: #2DD055;
     --color_botons_equals_hover: #47e36e;
-    --color_background_nav: #181818ec;
+    --color_background_nav: #181818f6;
     /* Theme dark */
     --color_letra_dark: #F1F1F1;
 }
 
 body {
-    padding: 20px 8% 5px 8%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--color_Letra);
+    color: var(--color_Letra);}
+
+.body_dark {
+    background-color: var(--color_Letra);
+    color: var(--color_letra_dark);
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 5% 0 5%;
 }
 
 .link_title {
@@ -47,11 +51,8 @@ body {
     font-size: 35px;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+.title_dark {
+    color: var(--color_letra_dark);
 }
 
 .list_nav {
@@ -75,6 +76,13 @@ body {
     }
 }
 
+.link_item_nav_cal_dark,
+.link_item_nav_mod_dark,
+.link_item_nav_med_dark,
+.link_item_nav_pro_dark {
+    color: var(--color_letra_dark);
+}
+
 .theme {
     cursor: pointer;
 }
@@ -93,6 +101,7 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 .background_calculator {
@@ -122,6 +131,8 @@ body {
     background-color: var(--color_skyBlue_calculator);
     border: none;
     outline: none;
+    text-align: right;
+    color: #4d4d4d;
 }
 
 #resultado {
@@ -131,6 +142,7 @@ body {
     border: none;
     outline: none;
     color: var(--color_title_calculator);
+    text-align: right;
 }
 
 .container_numbers {
@@ -202,24 +214,28 @@ body {
     }
 }
 
+.ocultar {
+    display: none;
+}
+
 @media (max-width: 980px) {
     .list_nav {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         background-color: var(--color_background_nav);
         color: var(--color_skyBlue_calculator);
     }
 
     .item_list_nav:first-child {
         position: absolute;
-        top: 40px;
-        right: 40px;
+        top: 28px;
+        right: 30px;
     }
 
     .link_item_nav {
@@ -231,7 +247,7 @@ body {
     }
 
     .li_close_nav, .span_bars {
-        display: block;
+        display: inline-block;
     }
 
     .icon_close_nav {
@@ -240,10 +256,6 @@ body {
 
     .icon_theme {
         font-size: 20px;
-    }
-
-    .ocultar {
-        display: none;
     }
 
     .icon_bars {
