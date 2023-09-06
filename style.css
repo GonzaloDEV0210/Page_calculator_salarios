@@ -214,10 +214,6 @@ body {
     }
 }
 
-.ocultar {
-    display: none;
-}
-
 @media (max-width: 980px) {
     .list_nav {
         position: fixed;
@@ -230,6 +226,10 @@ body {
         height: 100%;
         background-color: var(--color_background_nav);
         color: var(--color_skyBlue_calculator);
+    }
+
+    .ocultar {
+        display: none;
     }
 
     .item_list_nav:first-child {
