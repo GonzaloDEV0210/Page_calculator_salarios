@@ -1,0 +1,60 @@
+:root {
+    --color_btn_blue: #2156e8;
+    --color_btn_blue_hover: #3f6eef;
+    --color_btn_green: #099520;
+    --color_btn_green_hover: #2dae42;
+    --color_white: #f0f0f0;
+}
+
+.section_moda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#txtNumeros {
+    resize: none;
+    padding: 10px;
+    width: 50%;
+    border-radius: 15px;
+}
+
+.container_buttons_result {
+    width: 50%;
+    padding-left: 10px;
+}
+
+.btn {
+    width: 110px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.btnResolver {
+    background-color: var(--color_btn_blue);
+    border: 1px solid var(--color_btn_blue);
+    color: var(--color_white);
+    transition: .5s;
+    &:hover {
+        background-color: var(--color_btn_blue_hover);
+        cursor: pointer;
+    }
+}
+
+.btnLimpiar {
+    background-color: var(--color_btn_green);
+    border: 1px solid var(--color_btn_green);
+    color: var(--color_white);
+    transition: .5s;
+    &:hover {
+        background-color: var(--color_btn_green_hover);
+        cursor: pointer;
+    }
+}
+
+.container_results {
+    margin-top: 10px;
+}
