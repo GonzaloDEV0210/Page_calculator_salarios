@@ -4,6 +4,7 @@ const btnLimpiar = document.querySelector(".btnLimpiar");
 const imprimirRespuesta = document.querySelector(".imprimirRespuesta");
 
 txtNumeros.addEventListener("input", function () {
+    /* Aqui estamos haciedo que el textarea solo reciba numeros y coma */
     let valorTextArea = txtNumeros.value;
     let newValor = valorTextArea.replace(/[^0-9,]/g, "");
     txtNumeros.value = newValor;
@@ -27,14 +28,16 @@ btnResolver.addEventListener("click", function () {
             objetoNumeros[numero] = 1;
         } else {
             objetoNumeros[numero]++;
-        }
-    }
+        };
+    };
     let cantidad = 0;
     let moda = 0;
     for (let propiedad in objetoNumeros) {
         if (objetoNumeros[propiedad] > cantidad) {
             cantidad = objetoNumeros[propiedad];
             moda = propiedad;
+        } else if (objetoNumeros[propiedad] == cantidad) {
+            moda = moda + " y " + propiedad;
         };
     };
     imprimirRespuesta.textContent = moda;
