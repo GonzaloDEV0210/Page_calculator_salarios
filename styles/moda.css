@@ -71,6 +71,10 @@
     color: var(--color_rpta_dark);
 }
 
+.imprimirRespuesta {
+    font-size: 22px;
+}
+
 @media (max-width: 980px) {
     .container_buttons_result {
         display: flex;
