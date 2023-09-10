@@ -44,10 +44,10 @@ btnResolver.addEventListener("click", function () {
 });
 
 txtNumeros.addEventListener("input", function(event){
-    const valorInput = event.target.value;
-    const nuevoValor = valorInput.replace(/,+/g, ',');
+    const valorInput = event.target.value; /* Obtiene el valor que se escribe en el input */
+    const nuevoValor = valorInput.replace(/,+/g, ',');/* reemplaza las comas (primer parametro) por el segundo parametro (,) */
 
-    if (valorInput !== nuevoValor) {
-        txtNumeros.value = nuevoValor;
+    if (valorInput !== nuevoValor) { /* Pregunta, si el valor ingresado tiene mas de una coma (recordar que el nuevo valor solo tiene una coma) */
+        txtNumeros.value = nuevoValor; /* imprime el nuevo valor que si contiene solo una coma */
     };
 });
