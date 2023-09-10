@@ -42,3 +42,12 @@ btnResolver.addEventListener("click", function () {
     };
     imprimirRespuesta.textContent = moda;
 });
+
+txtNumeros.addEventListener("input", function(event){
+    const valorInput = event.target.value;
+    const nuevoValor = valorInput.replace(/,+/g, ',');
+
+    if (valorInput !== nuevoValor) {
+        txtNumeros.value = nuevoValor;
+    };
+});
