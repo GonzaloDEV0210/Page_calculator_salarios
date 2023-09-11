@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculaWeb | Calcular Mediana</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/moda.css">
+    <script src="https://kit.fontawesome.com/6d642dc6ea.js" crossorigin="anonymous"></script>
+</head>
+<body class="body">
+    <header class="header">
+        <a href="index.html" class="link_title"><h1 class="title">CalculaWeb</h1></a>
+        <ul class="list_nav ocultar">
+            <li class="item_list_nav li_close_nav"><i class="fa-solid fa-xmark icon icon_close_nav"></i></li>
+            <li class="item_list_nav"><a href="index.html" class="link_item_nav link_item_nav_cal">Calculadora</a></li>
+            <li class="item_list_nav"><a href="moda.html" class="link_item_nav link_item_nav_mod">Moda</a></li>
+            <li class="item_list_nav"><a href="mediana.html" class="link_item_nav link_item_nav_med">Mediana</a></li>
+            <li class="item_list_nav"><a href="proyeccion.html" class="link_item_nav link_item_nav_pro">Proyección Salarial</a></li>
+            <li class="item_list_nav theme"><i class="fa-solid fa-circle-half-stroke icon icon_theme"></i></li>
+        </ul>
+        <span class="span_bars"><i class="fa-solid fa-bars icon icon_bars"></i></span>
+    </header>
+    <section class="section_moda">
+        <h2 class="title_moda">Cálculo de la Mediana</h2>
+        <textarea name="numeros" id="txtNumeros" cols="30" rows="10" placeholder="Solo se puede ingresar numeros separados por coma simple (1,2,3)"></textarea>
+        <div class="container_buttons_result">
+            <div class="container_buttons">
+                <input type="button" value="Resolver" class="btnResolver btn">
+                <input type="button" value="Limpiar" class="btnLimpiar btn">
+            </div>
+            <div class="container_results">
+                <label for="" class="text_result">La respuesta es:</label>
+                <p class="imprimirRespuesta"></p>
+            </div>
+        </div>
+    </section>
+    <script src="js/theme.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="js/mediana.js"></script>
+</body>
+</html>
