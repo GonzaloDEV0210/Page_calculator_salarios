@@ -23,5 +23,15 @@ btnLimpiar.addEventListener("click", function(){
 });
 
 btnResolver.addEventListener("click", function(){
-    
+    let valorInput = txtNumeros.value;
+    let arrayNumero = valorInput.split(',').map((item) => parseFloat(item));
+    if (arrayNumero.length % 2 == 0) {
+        let mitadIndex = arrayNumero.length / 2;
+        let mediana = (arrayNumero[mitadIndex] + arrayNumero[mitadIndex - 1]) / 2;
+        imprimirRespuesta.textContent = mediana;
+    } else {
+        let mitadIndex = arrayNumero.length / 2;
+        let mediana = arrayNumero[Math.floor(mitadIndex)];
+        imprimirRespuesta.textContent = mediana;
+    };
 });
