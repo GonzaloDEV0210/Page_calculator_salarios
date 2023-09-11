@@ -1,20 +1,60 @@
 #main_principal {
-    margin-top: 50px;
+    margin-top: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 50px;
 }
 
+.section_one {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .container_label_input {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .text_input {
-    flex: 1;
+    flex: 100px;
 }
 
 .input {
     flex: 2;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.container_icon_add {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.container_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.boton {
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+#txtRespuesta {
+    resize: none;
+    width: 700px;
+    height: 400px;
 }
