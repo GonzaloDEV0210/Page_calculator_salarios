@@ -10,10 +10,16 @@ const container_results = document.querySelector(".container_results");
 icon_theme.addEventListener("click", function(){
     body.classList.toggle("body_dark");
     title.classList.toggle("title_dark");
-    link_item_nav_cal.classList.toggle("link_item_nav_cal_dark");
-    link_item_nav_mod.classList.toggle("link_item_nav_mod_dark");
-    link_item_nav_med.classList.toggle("link_item_nav_med_dark");
-    link_item_nav_pro.classList.toggle("link_item_nav_pro_dark");
-    /* El código que esta abajo me devuelve un error en las pestañas que no tienen dicho elemento en el DOM, arreglar ello */
-    container_results.classList.toggle("container_results_dark");
+    if (container_results == null) {
+        link_item_nav_cal.classList.toggle("link_item_nav_cal_dark");
+        link_item_nav_mod.classList.toggle("link_item_nav_mod_dark");
+        link_item_nav_med.classList.toggle("link_item_nav_med_dark");
+        link_item_nav_pro.classList.toggle("link_item_nav_pro_dark");
+    } else {
+        link_item_nav_cal.classList.toggle("link_item_nav_cal_dark");
+        link_item_nav_mod.classList.toggle("link_item_nav_mod_dark");
+        link_item_nav_med.classList.toggle("link_item_nav_med_dark");
+        link_item_nav_pro.classList.toggle("link_item_nav_pro_dark");
+        container_results.classList.toggle("container_results_dark");
+    }
 });
