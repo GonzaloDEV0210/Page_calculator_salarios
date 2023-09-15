@@ -21,5 +21,5 @@ icon_theme.addEventListener("click", function(){
         link_item_nav_med.classList.toggle("link_item_nav_med_dark");
         link_item_nav_pro.classList.toggle("link_item_nav_pro_dark");
         container_results.classList.toggle("container_results_dark");
-    }
+    };
 });
