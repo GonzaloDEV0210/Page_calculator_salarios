@@ -27,6 +27,7 @@
     padding: 10px;
     width: 50%;
     border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container_buttons_result {
@@ -76,10 +77,19 @@
 }
 
 @media (max-width: 980px) {
+    #txtNumeros {
+        width: 85%;
+    }
+
     .container_buttons_result {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        margin-top: 30px;
+    }
+
+    .container_buttons {
+        display: flex;
+        gap: 20px;
     }
 
     .container_results {
