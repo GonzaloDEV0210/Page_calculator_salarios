@@ -30,10 +30,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     btnResolver.addEventListener("click", function () {
         const input = document.querySelectorAll(".input"); /* el input recibe una lista con todos los elementos que tienen la misma clase  */
+        let arraySalarios = [];
+        for (let i = 1; i < input.length; i++) {
+            if (input[i].value != 0) {
+                arraySalarios.push(Number(input[i].value));
+            };
+        };
+        
+        let tasaArray = [];
+        for (let i = 1; i < arraySalarios.length; i++) {
+            let tasaCrecimiento = ((arraySalarios[i] - arraySalarios[i-1]) / arraySalarios[i-1]) * 100;
+            tasaArray.push(tasaCrecimiento);
+        };
+        
+        for (let  tasa of tasaArray) { /* Recorrer el array tasas para sacar el promedio de las tasas de salarios */
+
+        }
+        
         let alertMostrada = false;
         input.forEach(function () {
             if (input[0].value.length > 0) {
-                txtRespuesta.value = input[0].value;
+                txtRespuesta.value = input[0].value + ", tu proyección salarial para el próximo año es de ";
             } else {
                 if (!alertMostrada) {
                     alert("Escriba su nombre o el de su empresa");
@@ -41,13 +58,5 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
             };
         });
-
-        let arraySalarios = [];
-        for (let i = 1; i < input.length; i++) {
-            if (input[i].value != 0) {
-                arraySalarios.push(Number(input[i].value));
-            };
-        };
-        console.log(arraySalarios);
     });
 });
