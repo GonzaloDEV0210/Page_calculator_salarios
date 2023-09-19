@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     iconAdd.addEventListener("click", function (event) {
         if (click < 3) {
             let newDivAdd = document.createElement("div");
-            newDivAdd.innerHTML = "<label class='text_input'>Ingresa salario:</label><input class='input' type='text'>";
+            newDivAdd.innerHTML = "<label class='text_input'>Ingresa salario:</label><input class='input' type='text' oninput='validationSalary(this)'>";
             newDivAdd.classList.add('container_label_input');
             form.appendChild(newDivAdd);
             click++;
@@ -65,3 +65,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+function validationText(input) {
+    let valor = input.value;
+    let patron = /^[A-Za-z.]*$/;
+    if (!patron.test(valor)) {
+        input.value = valor.replace(/[^A-Za-z.]/g, '');
+    };
+};
+
+function validationSalary(input) {
+    let valorSalary = input.value;
+    let patron = /^[0-9.]*$/;
+    if (!patron.test(valorSalary)) {
+        input.value = valorSalary.replace(/[^0-9.]/g, '');
+    };
+};

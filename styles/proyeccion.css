@@ -108,3 +108,18 @@ body {
         padding-top: 25%;
     }
 }
+
+@media (max-width: 550px) {
+    .container_label_input {
+        flex-direction: column;
+    }
+
+    .text_input {
+        flex: 0;
+    }
+
+    .input {
+        width: 100%;
+        padding: 8px;
+    }
+}
