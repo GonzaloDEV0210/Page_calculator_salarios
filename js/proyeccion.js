@@ -43,14 +43,19 @@ document.addEventListener('DOMContentLoaded', function () {
             tasaArray.push(tasaCrecimiento);
         };
         
-        for (let  tasa of tasaArray) { /* Recorrer el array tasas para sacar el promedio de las tasas de salarios */
+        let suma = tasaArray.reduce(function(a,b){
+            return a + b;
+        },0);
 
-        }
+        let promedio = (suma / tasaArray.length) / 100;
+        let lastSalary = arraySalarios[arraySalarios.length - 1];
+        let aumento = lastSalary * promedio;
+        let proyeccionProximoYear = lastSalary + aumento;
         
         let alertMostrada = false;
         input.forEach(function () {
             if (input[0].value.length > 0) {
-                txtRespuesta.value = input[0].value + ", tu proyección salarial para el próximo año es de ";
+                txtRespuesta.value = input[0].value + ", tu proyección salarial para el próximo año es de " + proyeccionProximoYear;
             } else {
                 if (!alertMostrada) {
                     alert("Escriba su nombre o el de su empresa");

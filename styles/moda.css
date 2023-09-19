@@ -89,6 +89,8 @@
 
     .container_buttons {
         display: flex;
+        align-items: center;
+        justify-content: center;
         gap: 20px;
     }
 
@@ -98,3 +100,22 @@
         align-items: center;
     }
 }
+
+@media (max-width: 355px) {
+    .container_buttons_result {
+        width: 70%;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .icon_bars {
+        font-size: 25px;
+    }
+
+    .title_moda {
+        font-size: 22px;
+    }
+}
+
